@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+    int i=20 ,*ptr ;
+    char c='v',*ppp;
+     float b=9.9 ,*pio;
+     ptr=&i;
+     ppp=&c;
+     pio=&b;
+    //  ptr++;
+      printf("%d ",ptr);
+       ptr++;  //increment in rhe address which is stored by ptr
+    //  *pio=0;
+    // printf("%d ",b);    //will give 0
+    printf("%d ",ptr);
+    printf("%d ",ppp);
+     printf("%d ",pio);
+     printf("%d ",sizeof(i));
+    printf("%d ",sizeof(c));
+     printf("%d ",sizeof(b));
+     printf("%d ",sizeof(ptr));
+    printf("%d ",sizeof(ppp));
+     printf("%d ",sizeof(pio));
+
+    // int r=4;
+    // int y=5;
+    // int *p1, p2;
+    // *p1=r;
+    // printf("%p ",p1);
+    //   printf("%d",p2);
+    return 0;
+}
