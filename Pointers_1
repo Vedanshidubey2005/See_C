@@ -1,0 +1,17 @@
+    #include<stdio.h>
+    int main(){
+        int p=1;
+        int *ptr=&p;
+        int (*ptr)[30];
+        int *ptr[30];
+        
+        printf("%p\n",ptr);  //value stored in that variable,here value at pointer variable is address of p
+        printf("%d\n",*ptr);  
+        printf("%p\n",&ptr);
+        printf("%d\n",p);    //value stored in that variable ,which is 1
+        // printf("%d",*p);  error
+        printf("%p \n",&p);
+          printf("%d\n",*&p); 
+            printf("%d\n",*(&p)); 
+        return 0;
+    }
