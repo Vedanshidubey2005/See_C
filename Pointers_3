@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int p=4;
+    int *ptr;
+    ptr=&p;
+    printf("%d\n",p);
+    printf("%p\n",ptr);
+    printf("%d\n",*ptr++);
+    printf("%p\n",*++ptr);
+    printf("%p\n",++*ptr);
+    printf("%p\n",*ptr++);
+    return 0;
+}
