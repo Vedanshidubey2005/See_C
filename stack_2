@@ -1,0 +1,76 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node*next;
+};
+struct node*head,*temp,*newnode;
+int main() {
+     int choice=0;
+     while (choice!=4){
+         printf("any one\n");
+         printf("1.push\n,2pop\n,3.peak\n,4.display\n");
+         scanf("%d",&choice);
+         switch(choice){
+             case 1:
+             push();
+             break;
+             case 2:
+             pop();
+             break;
+             case 3:
+             peak();
+             break;
+             case 4:
+             display();
+             break;
+             default:
+             printf("wrong choice");
+         }
+     }
+
+    return 0;
+}
+int push(){
+    head=0;
+    int x;
+    newnode=(struct node*)malloc(sizeof(struct node));
+    printf("enter");
+    scanf("%d",&x);
+    newnode->data =x;
+    newnode->next=head;
+    head=newnode;
+}
+void pop(){
+    int item;
+    temp=head;
+    if(head==0){
+        printf("underflow\n");
+    }
+    else{
+        printf("%d is popped\n",head->data);
+        head=temp->next;
+        free(temp);
+    }
+}
+void peak(){
+    if(head==0){
+        printf("underflow\n");
+    }
+    else{
+        printf("%d is  top\n",head->data);
+    }
+}
+void display(){
+    temp=head;
+    if(head==0){
+        printf("underflow");
+    }
+    else{
+        while(temp!=0){
+        printf("%d",temp->data);
+        temp=temp->next;
+        }
+    }
+}
