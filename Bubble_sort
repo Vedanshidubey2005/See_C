@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<stdbool.h>
+void display(int arr[],int n);
+void Bubblesort(int arr[],int n);
+void swap(int *x, int *y);
+int main(){
+    int arr[] = {25,2,7,56,5,23,4,15,45};
+    bool swapped;
+	int n = sizeof(arr)/sizeof(arr[0]);
+    printf("Unsorted array: \n");
+	display(arr, n);
+	Bubblesort(arr, n);
+	printf("Sorted array: \n");
+	display(arr, n);
+    return 0;
+}
+void display(int arr[],int n){
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+}
+void swap(int *x, int *y)
+{
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+void Bubblesort(int arr[],int n){
+       int i, j;
+    bool swapped;
+    for (i = 0; i < n - 1; i++) {
+        swapped = false ;
+        for (j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(&arr[j], &arr[j + 1]);
+                swapped = true ;
+            }
+        }
+        if (swapped == false){
+         break;
+        }
+}
+}
