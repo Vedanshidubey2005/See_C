@@ -1,3 +1,4 @@
+//BUBBLE SORT
 #include<stdio.h>
 #include<stdbool.h>
 void display(int arr[],int n);
